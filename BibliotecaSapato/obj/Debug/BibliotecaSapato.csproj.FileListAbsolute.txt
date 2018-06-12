@@ -1,0 +1,12 @@
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\bin\Debug\BibliotecaSapato.exe.config
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\bin\Debug\BibliotecaSapato.exe
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\bin\Debug\BibliotecaSapato.pdb
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\obj\Debug\BibliotecaSapato.csprojResolveAssemblyReference.cache
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\obj\Debug\BibliotecaSapato.csproj.CoreCompileInputs.cache
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\obj\Debug\BibliotecaSapato.exe
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\obj\Debug\BibliotecaSapato.pdb
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\bin\Debug\EntityFramework.dll
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\bin\Debug\EntityFramework.SqlServer.dll
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\bin\Debug\EntityFramework.xml
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\bin\Debug\EntityFramework.SqlServer.xml
+D:\Positivo\pdp\Sapato\BibliotecaSapato\BibliotecaSapato\obj\Debug\BibliotecaSapato.csproj.CopyComplete
