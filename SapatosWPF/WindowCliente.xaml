@@ -1,0 +1,77 @@
+﻿<Window x:Class="SapatosWPF.WindowCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SapatosWPF"
+        mc:Ignorable="d"
+        Title="WindowCliente" Height="450" Width="800">
+    <Grid>
+
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            
+            <!--PF-->
+            <Label Margin="150,0,0,0" Grid.ColumnSpan="2" FontWeight="Bold" Grid.Row="0">Cliente PF</Label>
+
+            <Label Margin="10,0,0,0" Grid.Row="1">Nome</Label>
+            <Label Margin="10,0,0,0" Grid.Row="2">CPF</Label>
+            <Label Margin="10,0,0,0" Grid.Row="3">Data Nascimento</Label>
+            
+            <TextBox Grid.Row="1" Grid.Column="1" 
+                 Text="{Binding Path=ClientePFSelecionado.Nome}"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" 
+                 Text="{Binding Path=ClientePFSelecionado.CPF}"></TextBox>
+            <DatePicker Grid.Row="3" Grid.Column="1"                    
+                    SelectedDate="{Binding Path=ClientePFSelecionado.DtaNasc}"></DatePicker>      
+
+            <!--PJ-->
+            <Label Margin="150,0,0,0" Grid.ColumnSpan="2" Grid.Row="0" FontWeight="Bold" Grid.Column="2">Cliente PJ</Label>
+            <Label Margin="10,0,0,0" Grid.Column="2" Grid.Row="1">Nome</Label>
+            <Label Margin="10,0,0,0" Grid.Column="2" Grid.Row="2">CNPJ</Label>
+            <Label Margin="10,0,0,0" Grid.Column="2" Grid.Row="3">Razão Social</Label>
+            <Label Margin="10,0,0,0" Grid.Column="2" Grid.Row="4">Endereço</Label>
+
+            <TextBox Grid.Row="1" Grid.Column="3" 
+                 Text="{Binding Path=ClientePJSelecionado.Nome}"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="3" 
+                 Text="{Binding Path=ClientePJSelecionado.CNPJ}"></TextBox>
+            <TextBox Grid.Row="3" Grid.Column="3" 
+                 Text="{Binding Path=ClientePJSelecionado.RazaoSocial}"></TextBox>
+            <TextBox Grid.Row="4" Grid.Column="3" 
+                 Text="{Binding Path=ClientePJSelecionado.Endereco}"></TextBox>
+
+
+            <Button Grid.Row="6" Width="70" x:Name="SalvarPFButton"
+                Click="SalvarPFButton_Click"
+                Margin="10">Salvar PF</Button>
+            <Button Grid.Row="6" Grid.Column="2"  Width="70" x:Name="SalvarPJButton"
+                Click="SalvarPJButton_Click"
+                Margin="10">Salvar PJ</Button>
+            <Button Grid.Row="7" Grid.Column="3" x:Name="CancelarClienteButton"
+                Click="CancelarClienteButton_Click"
+                Width="70" Margin="59,10,36,10">Cancelar</Button>
+        </Grid>
+
+
+    </Grid>
+</Window>

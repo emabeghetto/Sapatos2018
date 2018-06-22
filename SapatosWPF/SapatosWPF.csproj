@@ -34,8 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,6 +63,40 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BancoContext.cs" />
+    <Compile Include="Migrations\201806152329137_Migracao1.cs" />
+    <Compile Include="Migrations\201806152329137_Migracao1.Designer.cs">
+      <DependentUpon>201806152329137_Migracao1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806162117531_migracao2.cs" />
+    <Compile Include="Migrations\201806162117531_migracao2.Designer.cs">
+      <DependentUpon>201806162117531_migracao2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806170442263_migracao3.cs" />
+    <Compile Include="Migrations\201806170442263_migracao3.Designer.cs">
+      <DependentUpon>201806170442263_migracao3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806171321363_migracao4.cs" />
+    <Compile Include="Migrations\201806171321363_migracao4.Designer.cs">
+      <DependentUpon>201806171321363_migracao4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806171545373_migracao41.cs" />
+    <Compile Include="Migrations\201806171545373_migracao41.Designer.cs">
+      <DependentUpon>201806171545373_migracao41.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="WindowCliente.xaml.cs">
+      <DependentUpon>WindowCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowEstoque.xaml.cs">
+      <DependentUpon>WindowEstoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowNovaVenda.xaml.cs">
+      <DependentUpon>WindowNovaVenda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowSapato.xaml.cs">
+      <DependentUpon>WindowSapato.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,6 +109,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WindowCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowNovaVenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowSapato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -81,10 +140,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201806152329137_Migracao1.resx">
+      <DependentUpon>201806152329137_Migracao1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806162117531_migracao2.resx">
+      <DependentUpon>201806162117531_migracao2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170442263_migracao3.resx">
+      <DependentUpon>201806170442263_migracao3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806171321363_migracao4.resx">
+      <DependentUpon>201806171321363_migracao4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806171545373_migracao41.resx">
+      <DependentUpon>201806171545373_migracao41.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +167,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BibliotecaModelos\BibliotecaModelos.csproj">
+      <Project>{71a398d6-cf49-40c3-a35c-ae30a750bf43}</Project>
+      <Name>BibliotecaModelos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

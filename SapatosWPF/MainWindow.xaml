@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SapatosWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Loja de Sapatos" Height="450" Width="800">
+
     <Grid>
-        
+        <Menu>
+            <MenuItem Header="Arquivo">
+                <MenuItem Header="Sair"/>
+            </MenuItem>
+            <MenuItem Header="Incluir">
+                <MenuItem Header="Nova venda" x:Name="MenuNovaVenda" Click="MenuItem_Click_NovaVenda"></MenuItem>
+                <MenuItem Header="Sapato"  x:Name="MenuNovoSapato"  Click="MenuItem_Click_Sapato"></MenuItem>
+                <MenuItem Header="Cliente"  x:Name="MenuNovoCliente" Click="MenuItem_Click_Cliente"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Listar">
+                <MenuItem Header="Estoque"  x:Name="MenuEstoque"  Click="MenuItem_Click_Estoque"></MenuItem>
+               
+            </MenuItem>
+        </Menu>
     </Grid>
+
+
 </Window>
+    
+    
+        

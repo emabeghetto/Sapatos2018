@@ -24,5 +24,40 @@ namespace SapatosWPF
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click_NovaVenda(object sender, RoutedEventArgs e)
+        {
+            WindowNovaVenda window =
+              new WindowNovaVenda();
+             window.ShowDialog();
+        }
+
+        private void MenuItem_Click_Sapato(object sender, RoutedEventArgs e)
+        {
+            if (sender == MenuNovoSapato)
+            {
+                WindowSapato window =
+              new WindowSapato();
+                window.ModoCriacaoSapato = true;
+                window.ShowDialog();
+            }
+             
+        }
+
+        private void MenuItem_Click_Cliente(object sender, RoutedEventArgs e)
+        {
+            WindowCliente window =
+              new WindowCliente();
+            window.ShowDialog();
+        }
+
+        private void MenuItem_Click_Estoque(object sender, RoutedEventArgs e)
+        {
+            WindowEstoque window =
+             new WindowEstoque();
+            window.ShowDialog();
+        }
+
+         
     }
 }
