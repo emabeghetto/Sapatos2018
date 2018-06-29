@@ -119,7 +119,7 @@ namespace SapatosWPF
               if (ModoCriacaoSapato == true)
 
                 {
-                this.SapatoSelecionado.Id = 1;
+                
                 if(this.SapatoSelecionado.Id <= 0)
                 {
                     ctx.ModeloSapatos.Add(SapatoSelecionado);

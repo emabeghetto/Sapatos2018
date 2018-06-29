@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaModelos", "BibliotecaModelos\BibliotecaModelos.csproj", "{71A398D6-CF49-40C3-A35C-AE30A750BF43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapatosWPF", "SapatosWPF\SapatosWPF.csproj", "{CDD539D5-D84A-4922-8829-F882C9DCA188}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapatosWeb", "SapatosWeb\SapatosWeb.csproj", "{F69D4E0C-01E5-4D34-98B9-64DD71AE1396}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{71A398D6-CF49-40C3-A35C-AE30A750BF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71A398D6-CF49-40C3-A35C-AE30A750BF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71A398D6-CF49-40C3-A35C-AE30A750BF43}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDD539D5-D84A-4922-8829-F882C9DCA188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDD539D5-D84A-4922-8829-F882C9DCA188}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDD539D5-D84A-4922-8829-F882C9DCA188}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDD539D5-D84A-4922-8829-F882C9DCA188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69D4E0C-01E5-4D34-98B9-64DD71AE1396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69D4E0C-01E5-4D34-98B9-64DD71AE1396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69D4E0C-01E5-4D34-98B9-64DD71AE1396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69D4E0C-01E5-4D34-98B9-64DD71AE1396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

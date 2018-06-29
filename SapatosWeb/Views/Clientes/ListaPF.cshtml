@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BibliotecaModelos.ClientePF>
+﻿@model SapatosWeb.ViewModels.ClientesViewModel
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -29,9 +29,8 @@
             @Html.DisplayFor(modelItem => item.DataNasc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("EditPF", "EditPF", new { id=item.Id }) |
+            @Html.ActionLink("DeletePF", "DeletePF", new { id=item.Id })
         </td>
     </tr>
 }

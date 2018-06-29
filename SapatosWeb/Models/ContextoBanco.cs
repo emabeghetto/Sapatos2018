@@ -9,15 +9,18 @@ namespace SapatosWeb.Models
 {
     public class ContextoBanco : DbContext
     {
-        public ContextoBanco() : base("strConn")
+        public ContextoBanco() : base("name=ContextoBanco")
         {
-
+            //Database.SetInitializer(new DropCreateDatabaseAlways<ContextoBanco>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ContextoBanco>());
         }
 
+
         public DbSet<ModeloSapato> Sapatos { get; set; }
-        public DbSet<Cliente> Clientes { get; set; }
         public DbSet<ClientePF> ClientePFs { get; set; }
         public DbSet<ClientePJ> ClientePJs { get; set; }
 
+        public DbSet<VendaSapato> VendaSapatoes { get; set; }
     }
+
 }

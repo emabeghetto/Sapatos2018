@@ -17,16 +17,7 @@ namespace SapatosWPF
         public BancoContext()
             : base("name=BancoContext")
         {
-        }
-
-        // Add a DbSet for each entity type that you want to include in your model. For more information 
-        // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
-
-        //O código esá caindo nessa excessão, nao consegui progredir sobre o erro, pois a unica recomendação que tinha é 
-        //fazer o código do banco como se fosse dabasefirst, mas uma das restrições do projeto e que fosse modelfirst
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
+            //Database.SetInitializer(new DropCreateDatabaseAlways<BancoContext>());
         }
 
         public virtual DbSet<Cliente> Clientes { get; set; }
