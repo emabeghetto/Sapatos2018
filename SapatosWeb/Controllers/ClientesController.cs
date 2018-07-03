@@ -14,7 +14,7 @@ namespace SapatosWeb.Controllers
     public class ClientesController : Controller
     {
 
-        ContextoBanco ctx = new ContextoBanco();
+        ContextoBanco1 ctx = new ContextoBanco1();
 
 
         // GET: Clientes
@@ -109,6 +109,35 @@ namespace SapatosWeb.Controllers
             return View(clientePFsalvo);
         }
 
+        //get
+        public ActionResult DeletePF(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ClientePF clientePFdelete = ctx.ClientePFs.Find(id);
+            if (clientePFdelete == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.ClientePFId = new SelectList(ctx.ClientePFs, "Nome", "CPF", "DataNasc");
+
+            return View(clientePFdelete);
+
+        }
+
+        // POST: Produtos/Delete/5
+        [HttpPost, ActionName("DeletePF")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePFConfirmed(int id)
+        {
+            ClientePF clientePFdeleteConfirmed = ctx.ClientePFs.Find(id);
+            ctx.ClientePFs.Remove(clientePFdeleteConfirmed);
+            ctx.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
 
 
@@ -165,7 +194,7 @@ namespace SapatosWeb.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ClienteIdPJ = new SelectList(ctx.ClientePJs, "Id", "Nome", "CNPJ", "RazaoSocial","Endereco");
+            ViewBag.ClienteIdPJ = new SelectList(ctx.ClientePJs, "Id", "Nome", "CNPJ","RazaoSocial","Endereco");
 
             return View(clientePJedit);
 
@@ -173,7 +202,7 @@ namespace SapatosWeb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditPJ([Bind(Include = "Id, Nome, , CNPJ, Endereco")] ClientePJ clientePJsalvo)
+        public ActionResult EditPJ([Bind(Include = "Id, Nome, CNPJ, RazaoSocial, Endereco")] ClientePJ clientePJsalvo)
         {
             if (ModelState.IsValid)
             {
@@ -185,6 +214,39 @@ namespace SapatosWeb.Controllers
 
             return View(clientePJsalvo);
         }
+
+        //get
+        public ActionResult DeletePJ(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ClientePJ clientePJdelete = ctx.ClientePJs.Find(id);
+            if (clientePJdelete == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.ClientePJId = new SelectList(ctx.ClientePJs, "Id", "Nome", "CNPJ", "RazaoSocial", "Endereco");
+
+            return View(clientePJdelete);
+
+        }
+
+        // POST: Produtos/Delete/5
+        [HttpPost, ActionName("DeletePJ")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePJConfirmed(int id)
+        {
+            ClientePJ clientePJdeleteConfirmed = ctx.ClientePJs.Find(id);
+            ctx.ClientePJs.Remove(clientePJdeleteConfirmed);
+            ctx.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
+
+
 
 
 

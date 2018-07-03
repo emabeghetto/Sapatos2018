@@ -84,6 +84,10 @@
     <Compile Include="Migrations\201806171545373_migracao41.Designer.cs">
       <DependentUpon>201806171545373_migracao41.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807011535151_migration6.cs" />
+    <Compile Include="Migrations\201807011535151_migration6.Designer.cs">
+      <DependentUpon>201807011535151_migration6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="WindowCliente.xaml.cs">
       <DependentUpon>WindowCliente.xaml</DependentUpon>
@@ -154,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806171545373_migracao41.resx">
       <DependentUpon>201806171545373_migracao41.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807011535151_migration6.resx">
+      <DependentUpon>201807011535151_migration6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

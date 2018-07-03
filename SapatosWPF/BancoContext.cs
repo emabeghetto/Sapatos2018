@@ -20,8 +20,7 @@ namespace SapatosWPF
             //Database.SetInitializer(new DropCreateDatabaseAlways<BancoContext>());
         }
 
-        public virtual DbSet<Cliente> Clientes { get; set; }
-
+       
         public virtual DbSet<ClientePF> ClientePFs { get; set; }
 
         public virtual DbSet<ClientePJ> ClientePJs { get; set; }

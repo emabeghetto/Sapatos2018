@@ -12,7 +12,7 @@ namespace SapatosWeb.Controllers
 {
     public class SapatosController : Controller
     {
-        ContextoBanco ctx = new ContextoBanco();
+        ContextoBanco1 ctx = new ContextoBanco1();
         // GET: Sapatos
         public ActionResult Index()
         {
@@ -21,7 +21,7 @@ namespace SapatosWeb.Controllers
                 Response.Write("<script>alert('Cadastro Salvo');</script>");
                 TempData.Remove("msgSalvo");
             }
-            ContextoBanco ctx = new ContextoBanco();
+            ContextoBanco1 ctx = new ContextoBanco1();
             List<ModeloSapato> sapatosSalvos = ctx.Sapatos.ToList();
             return View(sapatosSalvos);
         }

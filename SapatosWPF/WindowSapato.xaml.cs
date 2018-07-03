@@ -44,7 +44,7 @@ namespace SapatosWPF
             InitializeComponent();
             this.ModeloSapatos = ctx.ModeloSapatos.ToList();
 
-            if (ModoCriacaoSapato == false)
+            if (ModoCriacaoSapato == false && this.ModeloSapatos.Count > 0)
             {
                 this.SapatoSelecionado = this.ModeloSapatos.FirstOrDefault();
             }
@@ -54,10 +54,10 @@ namespace SapatosWPF
 
 
         // --- classes
-       
 
 
-       
+        //private ModeloSapato _SapatoSelecionado = new ModeloSapato();
+
         public ModeloSapato SapatoSelecionado
         {
             get => _SapatoSelecionado;
@@ -67,13 +67,13 @@ namespace SapatosWPF
                 this.NotifyPropertyChanged("SapatoSelecionado");
             }
 
-        }
-
-       
+        }      
 
 
         public Boolean ModoCriacaoSapato { get; set; } = false;
 
+
+        
 
 
         public Visibility VisibilidadeDataGrid
@@ -125,7 +125,11 @@ namespace SapatosWPF
                     ctx.ModeloSapatos.Add(SapatoSelecionado);
                     MessageBox.Show("Novo Sapato salvo com Sucesso!");
 
-              }
+                }
+                else
+                {
+                    this.SapatoSelecionado = new ModeloSapato();
+                }
 
             }
                 ctx.SaveChanges();

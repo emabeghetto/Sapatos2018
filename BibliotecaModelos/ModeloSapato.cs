@@ -14,6 +14,6 @@ namespace BibliotecaModelos
         public bool Cadarco { get; set; }
         public string Cor { get; set; }
         public string Material { get; set; }
-        public double Preco { get; set; }
+        public double Preco { get; set; }   
       }
 }

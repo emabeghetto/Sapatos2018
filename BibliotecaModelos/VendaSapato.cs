@@ -8,17 +8,21 @@ namespace BibliotecaModelos
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //autoincrement de chave primaria
         public int Id { get; set; }
-
-        public int ClienteId { get; set; }
-        
-        [ForeignKey("ClienteId")] //referencia a chave estrangeira pra não precisar fazer uma cadeia de consultas no bd
         public Cliente ClienteVenda { get; set; }
-
-        
-        public ICollection<LoteVendaSapato> LotesVenda { get; set; }
-        [InverseProperty("LotesVenda")] //atribui automaticamente o sapato da venda ao lote
-
-        public double PrecoTotal { get; set; }
-
+        public ModeloSapato Modelo { get; set; }
+        public int Tamanho { get; set; }
+        public double Preco { get; set; }
+        public virtual List<Cliente> ListaClientes { get; set; }
     }
-}
+        
+}   
+
+
+
+         
+
+
+
+
+
+
