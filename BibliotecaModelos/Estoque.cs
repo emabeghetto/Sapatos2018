@@ -10,8 +10,11 @@ namespace BibliotecaModelos
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //autoincrement de chave primaria
         public int Id { get; set; }
-        public ModeloSapato Modelo { get; set; }
-        public int Tamanho { get; set; }
+
+        [ForeignKey("Modelo")]
+        public  int ModeloId { get; set; }
+        public virtual ModeloSapato Modelo { get; set; }
+        
         public int QtdDisponivel { get; set; }
     }
 }

@@ -161,9 +161,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\EstoquesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SapatosController.cs" />
-    <Compile Include="Controllers\VendasController.cs" />
+    <Compile Include="Controllers\VendaSapatoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -198,6 +199,18 @@
     <Compile Include="Migrations\201807032225169_migration81.cs" />
     <Compile Include="Migrations\201807032225169_migration81.Designer.cs">
       <DependentUpon>201807032225169_migration81.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807032251428_migration9.cs" />
+    <Compile Include="Migrations\201807032251428_migration9.Designer.cs">
+      <DependentUpon>201807032251428_migration9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807032325546_migration11.cs" />
+    <Compile Include="Migrations\201807032325546_migration11.Designer.cs">
+      <DependentUpon>201807032325546_migration11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807032334483_migration12.cs" />
+    <Compile Include="Migrations\201807032334483_migration12.Designer.cs">
+      <DependentUpon>201807032334483_migration12.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContextoBanco1.cs" />
@@ -256,10 +269,16 @@
     <Content Include="Views\Clientes\EditPJ.cshtml" />
     <Content Include="Views\Clientes\DeletePF.cshtml" />
     <Content Include="Views\Clientes\DeletePJ.cshtml" />
-    <Content Include="Views\Vendas\Create.cshtml" />
-    <Content Include="Views\Vendas\Delete.cshtml" />
-    <Content Include="Views\Vendas\Edit.cshtml" />
-    <Content Include="Views\Vendas\Index.cshtml" />
+    <Content Include="Views\VendaSapatoes\Create.cshtml" />
+    <Content Include="Views\VendaSapatoes\Delete.cshtml" />
+    <Content Include="Views\VendaSapatoes\Details.cshtml" />
+    <Content Include="Views\VendaSapatoes\Edit.cshtml" />
+    <Content Include="Views\VendaSapatoes\Index.cshtml" />
+    <Content Include="Views\Estoques\Create.cshtml" />
+    <Content Include="Views\Estoques\Delete.cshtml" />
+    <Content Include="Views\Estoques\Details.cshtml" />
+    <Content Include="Views\Estoques\Edit.cshtml" />
+    <Content Include="Views\Estoques\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,6 +320,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807032225169_migration81.resx">
       <DependentUpon>201807032225169_migration81.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807032251428_migration9.resx">
+      <DependentUpon>201807032251428_migration9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807032325546_migration11.resx">
+      <DependentUpon>201807032325546_migration11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807032334483_migration12.resx">
+      <DependentUpon>201807032334483_migration12.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

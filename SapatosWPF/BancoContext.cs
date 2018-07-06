@@ -17,7 +17,7 @@ namespace SapatosWPF
         public BancoContext()
             : base("name=BancoContext")
         {
-            //Database.SetInitializer(new DropCreateDatabaseAlways<BancoContext>());
+            Database.SetInitializer(new DropCreateDatabaseAlways<BancoContext>());
         }
 
        

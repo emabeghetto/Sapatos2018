@@ -1,0 +1,50 @@
+﻿@model BibliotecaModelos.VendaSapato
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VendaSapato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClienteVenda.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClienteVenda.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tamanho)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tamanho)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

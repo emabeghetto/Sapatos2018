@@ -27,7 +27,8 @@ namespace SapatosWeb.Models
         public DbSet<ClientePF> ClientePFs { get; set; }
         public DbSet<ClientePJ> ClientePJs { get; set; }
         public DbSet<VendaSapato> VendaSapatoes { get; set; }
-         
+        public DbSet<Estoque> Estoques { get; set; }
+
     }
 
     
